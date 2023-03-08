@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>{{title}}</title>
+</head>
+<body>
+<center>
+<form id="frm" name="frm" accept-charset="utf-8" method="post" action="">
+  <table style="width:100%;">
+      <tr><td colspan="2"><center><h1>Family Map v0.1</h1>God of Royal Family</center></td></tr>
+    <tr>
+        <td>아 이 디 :</td>
+        <td>
+            <!-- <input type="text" id="s_email" name="s_email"> -->
+            <select id="s_email" name="s_email" style="width:100%; height:5vh;">
+                <option value="F1">F1</option>
+                <option value="F2">F2</option>
+                <option value="F3">F3</option>
+                <option value="F4">F4</option>
+                <option value="F4">F4</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+      <td>인증코드 : </td>
+        <td><input type="password" id="pwd" name="pwd"  style="width:100%; height:5vh;"></td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+        <input type="button" value="확인" style="width:100%;height:10vh;" onclick="fncSubmit_rslt()">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center">
+          <span style="color:red">{{msg}}</span>
+        </td>
+    </tr>
+  </table>
+</form>
+</center>
+</body>
+</html>
+
+<script>
+  
+function fncSubmit_rslt() {
+
+    if(document.getElementById("s_email").value=="") {
+        alert("아이디를 넣으세요")
+        return false;
+    }
+    if(document.getElementById("pwd").value=="") {
+        alert("인증코드를 넣으세요")
+        return false;
+    }
+
+    // document.getElementById("frm").target = "frm"
+    document.getElementById("frm").action  = "/loginProc"
+    document.getElementById('frm').submit();
+
+}
+</script>
+  

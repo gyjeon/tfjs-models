@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flask Web - yung jeon</title>
+</head>
+<body>
+    
+    <h2>
+        Flask Web Index - yung jeon Root Page <a href="/">클릭</a>
+    </h2>
+    <h3>
+        GPSTrace  - <a href="/gpsTrace">클릭</a>
+    </h3>
+   <h3><a href="/logout">{{session['s_email']}} 로그아웃</a></h3>
+    
+    <h3>
+        Request  - req
+    </h3>
+    <form action="/req" method="post">
+    	번호 : <input type="text" name="num" value="3"><br>
+        타이틀 : <input type="text" name="title" value="타이틀"><br>
+        
+        <input type="submit" value="제출">
+    </form>
+</body>
+</html>
+<script>
+// location.href="/gpsTrace"
+</script>
